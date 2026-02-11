@@ -88,3 +88,10 @@ insurance_dataset.replace({'smoker':{'yes':0,'no':1}}, inplace=True)
 
 # encoding 'region' column
 insurance_dataset.replace({'region':{'southeast':0,'southwest':1,'northeast':2,'northwest':3}}, inplace=True)
+
+#Splitting the Features and Target
+
+X = insurance_dataset.drop(columns='charges', axis=1)
+Y = insurance_dataset['charges']
+
+print(Y)
