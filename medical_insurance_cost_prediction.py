@@ -125,3 +125,18 @@ test_data_prediction =regressor.predict(X_test)
 # R squared value
 r2_test = metrics.r2_score(Y_test, test_data_prediction)
 print('R squared vale : ', r2_test)
+
+#Building a Predictive System
+
+input_data = (31,1,25.74,0,1,0)
+
+# changing input_data to a numpy array
+input_data_as_numpy_array = np.asarray(input_data)
+
+# reshape the array
+input_data_reshaped = input_data_as_numpy_array.reshape(1,-1)
+
+prediction = regressor.predict(input_data_reshaped)
+print(prediction)
+
+print('The insurance cost is USD ', prediction[0])
