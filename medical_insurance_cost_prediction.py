@@ -46,3 +46,33 @@ plt.figure(figsize=(6,6))
 sns.distplot(insurance_dataset['bmi'])
 plt.title('BMI Distribution')
 plt.show()
+
+#Normal BMI Range --> 18.5 to 24.9
+
+# children column
+plt.figure(figsize=(6,6))
+sns.countplot(x='children', data=insurance_dataset)
+plt.title('Children')
+plt.show()
+
+insurance_dataset['children'].value_counts()
+
+# smoker column
+plt.figure(figsize=(6,6))
+sns.countplot(x='smoker', data=insurance_dataset)
+plt.title('smoker')
+plt.show()
+
+# region column
+plt.figure(figsize=(6,6))
+sns.countplot(x='region', data=insurance_dataset)
+plt.title('region')
+plt.show()
+
+insurance_dataset['region'].value_counts()
+
+# distribution of charges value
+plt.figure(figsize=(6,6))
+sns.distplot(insurance_dataset['charges'])
+plt.title('Charges Distribution')
+plt.show()
