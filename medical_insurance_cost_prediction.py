@@ -76,3 +76,15 @@ plt.figure(figsize=(6,6))
 sns.distplot(insurance_dataset['charges'])
 plt.title('Charges Distribution')
 plt.show()
+
+#Data Pre-Processing
+
+# encoding sex column
+insurance_dataset.replace({'sex':{'male':0,'female':1}}, inplace=True)
+
+
+3 # encoding 'smoker' column
+insurance_dataset.replace({'smoker':{'yes':0,'no':1}}, inplace=True)
+
+# encoding 'region' column
+insurance_dataset.replace({'region':{'southeast':0,'southwest':1,'northeast':2,'northwest':3}}, inplace=True)
