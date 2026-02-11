@@ -20,3 +20,29 @@ insurance_dataset.shape
 
 # getting some informations about the dataset
 insurance_dataset.info()
+
+#Data Analysis
+
+# statistical Measures of the dataset
+insurance_dataset.describe()
+
+# distribution of age value
+sns.set()
+plt.figure(figsize=(6,6))
+sns.distplot(insurance_dataset['age'])
+plt.title('Age Distribution')
+plt.show()
+
+# Gender column
+plt.figure(figsize=(6,6))
+sns.countplot(x='sex', data=insurance_dataset)
+plt.title('Sex Distribution')
+plt.show()
+
+insurance_dataset['sex'].value_counts()
+
+# bmi distribution
+plt.figure(figsize=(6,6))
+sns.distplot(insurance_dataset['bmi'])
+plt.title('BMI Distribution')
+plt.show()
