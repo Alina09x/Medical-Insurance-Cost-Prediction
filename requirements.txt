@@ -1,0 +1,6 @@
+# Core dependencies for Insurance Cost Prediction Project
+pandas==1.5.3              # For data loading and manipulation
+numpy==1.24.3             # For numerical operations
+matplotlib==3.7.1         # For data visualization
+seaborn==0.12.2           # For statistical visualizations
+scikit-learn==1.2.3       # For Linear Regression, train_test_split, metrics
