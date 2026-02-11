@@ -101,3 +101,27 @@ print(Y)
 X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=2)
 
 print(X.shape, X_train.shape, X_test.shape)
+
+#Model Training
+
+#Linear Regression
+
+# loading the Linear Regression model
+regressor = LinearRegression()
+regressor.fit(X_train, Y_train)
+
+#Model Evaluation
+
+# prediction on training data
+training_data_prediction =regressor.predict(X_train)
+
+# R squared value
+r2_train = metrics.r2_score(Y_train, training_data_prediction)
+print('R squared vale : ', r2_train)
+
+# prediction on test data
+test_data_prediction =regressor.predict(X_test)
+
+# R squared value
+r2_test = metrics.r2_score(Y_test, test_data_prediction)
+print('R squared vale : ', r2_test)
