@@ -95,3 +95,9 @@ X = insurance_dataset.drop(columns='charges', axis=1)
 Y = insurance_dataset['charges']
 
 print(Y)
+
+#Splitting the data into Training data & Testing Data
+
+X_train, X_test, Y_train, Y_test = train_test_split(X, Y, test_size=0.2, random_state=2)
+
+print(X.shape, X_train.shape, X_test.shape)
